@@ -19,6 +19,7 @@ $(function () {
                 console.log('Signed out');
                 $('.wrappingdiv .signed-out').show();
                 $('.wrappingdiv .sign-out').hide();
+                $("#anonymous-join").removeClass("disable");
             }, function (error) {
                 // or a failure
                 console.log(error || 'Cannot sign out');

@@ -12,7 +12,7 @@ var client;
 $(function () {
     'use strict';
     window['anonymous-join_load'] = function () {
-        client = new window.skypeWebAppCtor;
+        client = window.skypeWebApp;//new window.skypeWebAppCtor;
         function onChanged(name, newState, reason, oldState) {
             console.log(name + ': %c' + oldState + ' -> ' + newState, 'color:green;font-weight:bold', 'Reason: ', reason);
         }
@@ -41,7 +41,7 @@ $(function () {
                     conversation.participants.added(function (p) {
                         p.video.state.changed(function (newState, reason, oldState) {
                             onChanged('_participant.video.state', newState, reason, oldState);
-                            // a convenient place to set the video stream container 
+                            // a convenient place to set the video stream container
                             if (newState == 'Connected') {
                                 p.video.channels(0).stream.state.changed(function (ns, r, os) {
                                     onChanged('_participant.video.channels(0).stream.state', ns, r, os);
@@ -81,8 +81,8 @@ $(function () {
                 // display the error message
                 console.error(error);
                 alert(error || 'Cannot sign in');
-            })
-                .status.changed(function (status) {
+            // })
+            //     .status.changed(function (status) {
             });
         });
         // join conference and start chat

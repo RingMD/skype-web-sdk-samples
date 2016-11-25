@@ -10,10 +10,10 @@ $(function () {
             $('.wrappingdiv .signed-in').hide();
             $('.modal').show();
             testForConfigAndSignIn({
-                "client_id": "e129a76c-918e-4efe-9b90-7c3a8ec1bbd7",
+                "client_id": "439fb275-3d2a-4e7f-bcb5-f0cdcfeed596",
                 "origins": ["https://webdir.online.lync.com/autodiscover/autodiscoverservice.svc/root"],
                 "cors": true,
-                "version": 'SkypeOnlinePreviewApp/1.0.0',
+                "version": 'RingMD Enterprise Stg/1.0.0',
                 "redirect_uri": '/token.html'
             });
         }

@@ -1,5 +1,5 @@
 $(function () {
-    'use strict';    
+    'use strict';
     $(".menu li a").click(function () {
         var module = this.id;
         var isSignedIn = window.skypeWebApp && window.skypeWebApp.signInManager.state() == "SignedIn";
